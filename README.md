@@ -1,3 +1,2 @@
-# ecoapp
-
-Proyecto para introducción a la ingeniería
+# Intro
+Proyecto creado para el ramo "Introduccion a la ingeniería"
