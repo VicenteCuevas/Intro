@@ -56,4 +56,4 @@ Primero que todo, usted debe tener instalado [Ionic Framework](https://ionicfram
    ```bash
    $ ionic cordova run browser
    ```
-   Esto nos instalará soporte para correr cordova en el browser, tambien pueden correr una emulacion de android y ios reemplazando respectivamente, para más información revise la [documentación ofical de Ionic Framework](https://ionicframework.com/docs/)
+   Esto nos instalará soporte para correr cordova en el browser, tambien pueden correr una emulacion de android y ios reemplazando respectivamente, para más información revise la [documentación oficial de Ionic Framework](https://ionicframework.com/docs/)
