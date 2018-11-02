@@ -1,28 +1,35 @@
 import { Component } from '@angular/core';
 import { NavController, AlertController } from 'ionic-angular';
-import { BarcodeScanner } from '@ionic-native/barcode-scanner'
+import { BarcodeScanner, BarcodeScannerOptions } from '@ionic-native/barcode-scanner'
 @Component({
   selector: 'page-about',
   templateUrl: 'about.html'
 })
 export class AboutPage {
-
+	options: BarcodeScannerOptions;
   constructor(public navCtrl: NavController,
-  	private codeScanner: BarcodeScanner,
+  	private Scanner: BarcodeScanner,
   	private alertCntrller: AlertController) {
 
   }
   escanear(){
-  	this.codeScanner.scan()
-  	.then(barcodeData=>{
-  		console.log(barcodeData);
+		this.options = {
+			prompt: 'Escanea el codigo de barra.'
+		};
+  	this.Scanner.scan(this.options)
+  	.then((data)=>{
+  		console.log(data);
   		this.alertCntrller.create({
   			title: 'Tu codigo es:',
-  			subTitle:'asd',
+  			subTitle:data.text,
   			buttons: ['OK']
   		}).present();
-  	}).catch(barcodeError=>{
-  		console.log(barcodeError);
-  	})
+  	}, (err) => {
+			this.alertCntrller.create({
+				title: 'Ha ocurrido un error',
+				subTitle: 'Por favor intentalo de nuevo',
+				buttons: ['OK']
+			})
+		})
   }
 }
