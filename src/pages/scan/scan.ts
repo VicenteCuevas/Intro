@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 import { NavController, AlertController } from 'ionic-angular';
 import { BarcodeScanner, BarcodeScannerOptions } from '@ionic-native/barcode-scanner'
 @Component({
-  selector: 'page-about',
-  templateUrl: 'about.html'
+  selector: 'page-scan',
+  templateUrl: 'scan.html'
 })
 export class ScanPage {
 	options: BarcodeScannerOptions;
