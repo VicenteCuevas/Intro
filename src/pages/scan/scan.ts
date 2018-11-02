@@ -5,7 +5,7 @@ import { BarcodeScanner, BarcodeScannerOptions } from '@ionic-native/barcode-sca
   selector: 'page-about',
   templateUrl: 'about.html'
 })
-export class AboutPage {
+export class ScanPage {
 	options: BarcodeScannerOptions;
   constructor(public navCtrl: NavController,
   	private Scanner: BarcodeScanner,
